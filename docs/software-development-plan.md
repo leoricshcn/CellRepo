@@ -18,23 +18,23 @@
 ## 3. 详细分步计划
 
 ### 3.1 需求与方案确认
-1. 梳理角色与权限矩阵，明确 `/task` 与 `/listask` 的调用者与数据访问范围。
-2. 绘制任务流程时序图：Slash Command -> 交互处理 -> Discord 频道操作。
-3. 确定配置项清单：机器人 Token、公钥、`tasks` 频道 ID、默认时区与日期格式。
-4. 评估是否引入 D1/SQLite 做任务索引缓存，为 `/listask` 查询优化做准备。
+1. ✅ 梳理角色与权限矩阵，明确 `/task` 与 `/listask` 的调用者与数据访问范围。
+2. ✅ 绘制任务流程时序图：Slash Command -> 交互处理 -> Discord 频道操作。
+3. ✅ 确定配置项清单：机器人 Token、公钥、`tasks` 频道 ID、默认时区与日期格式。
+4. ✅ 评估是否引入 D1/SQLite 做任务索引缓存，为 `/listask` 查询优化做准备。
 
 ### 3.2 基础设施搭建
-1. 初始化 Node.js + TypeScript 项目结构，配置 tsconfig、ESLint、Prettier、Jest。
-2. 引入 Discord.js v14、@discordjs/rest、discord-api-types、dotenv、zod、Luxon/Day.js 等依赖。
-3. 搭建基础目录结构：`src/commands`, `src/services`, `src/config`, `src/utils`。
-4. 实现环境变量加载模块，约定 `.env.example` 格式。
-5. 配置 GitHub Actions 进行 Lint、测试、类型检查。
+1. ✅ 初始化 Node.js + TypeScript 项目结构，配置 tsconfig、ESLint、Prettier、Jest。
+2. ✅ 引入 Discord.js v14、@discordjs/rest、discord-api-types、dotenv、zod、Luxon/Day.js 等依赖。
+3. ✅ 搭建基础目录结构：`src/commands`, `src/services`, `src/config`, `src/utils`。
+4. ✅ 实现环境变量加载模块，约定 `.env.example` 格式。
+5. ✅ 配置 GitHub Actions 进行 Lint、测试、类型检查。
 
 ### 3.3 命令注册与交互处理
-1. 定义 `/task` 与 `/listask` Slash Command 的 schema（名称、描述、参数）。
-2. 实现命令注册脚本，向 Discord 应用提交命令定义。
-3. 在 Cloudflare Workers 或 Node 运行时建立 Interaction 处理入口，解析命令并路由到对应处理器。
-4. 添加基础日志记录与错误处理框架。
+1. ✅ 定义 `/task` 与 `/listask` Slash Command 的 schema（名称、描述、参数）。
+2. ✅ 实现命令注册脚本，向 Discord 应用提交命令定义。
+3. ✅ 在 Cloudflare Workers 或 Node 运行时建立 Interaction 处理入口，解析命令并路由到对应处理器。
+4. ✅ 添加基础日志记录与错误处理框架。
 
 ### 3.4 `/task` 命令实现
 1. 使用 zod 校验 `task_name`、`due_date`、`assignees` 参数合法性。
