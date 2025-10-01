@@ -37,7 +37,7 @@
 4. ✅ 添加基础日志记录与错误处理框架。
 
 ### 3.4 `/task` 命令实现
-1. 使用 zod 校验 `task_name`、`due_date`、`assignees` 参数合法性。
+1. ✅ 使用 zod 校验 `task_name`、`due_date`、`assignees` 参数合法性。
 2. 调用 Discord API 在 `tasks` 频道创建帖子：
    - 标题遵循 `<task_name> | Due: <due_date>` 格式。
    - 正文包含任务描述、标准化截止时间与 @ 指派成员。
